@@ -1,5 +1,7 @@
 # Express.js RESTful API Guide
 
+> 📚 This repository now has a Docsify-powered site — open `docs/` locally with Docsify or enable GitHub Pages (serve the `docs/` folder) to publish the site.
+
 A comprehensive guide to designing and implementing RESTful APIs following industry best practices.
 
 ## Table of Contents
@@ -893,6 +895,21 @@ module.exports = router;
 - [Joi Validation](https://joi.dev/api/)
 - [Express.js Documentation](https://expressjs.com/)
 - [OpenAPI Specification](https://swagger.io/specification/)
+
+---
+
+## Deploying the docs (GitHub Pages) ✅
+
+**Option A — Quick (no CI):**
+1. Go to your repository Settings → **Pages**.
+2. Under **Source**, choose **main** branch and folder **/docs**.
+3. Save. The site will be available at `https://<your-username>.github.io/<repo>/` (may take a minute).
+
+**Option B — Automatic (recommended):**
+- I added a GitHub Action `.github/workflows/deploy-docs.yml` that publishes the `docs/` folder to the `gh-pages` branch on every push to `main` using `peaceiris/actions-gh-pages` (no static build required for Docsify).
+- After the first Action run, update Pages settings to serve from **gh-pages** branch (root) if needed.
+
+> Tip: If you prefer immediate manual control, use Option A; if you want automatic publishing on pushes to `main`, use Option B.
 
 ---
 
