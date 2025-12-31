@@ -8,7 +8,9 @@ app.use(userRoute);
 
 const paymentRoute = require("./payment");
 app.use(paymentRoute);
-
+app.get("/",(req,res)=>{
+    res.send("Hello World");
+})
 app.listen(3000,()=>{
     console.log("Server is running..");
 })
